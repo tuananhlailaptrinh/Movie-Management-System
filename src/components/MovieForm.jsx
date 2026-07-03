@@ -7,6 +7,8 @@ const MovieForm = ({ initialData, onSubmit, buttonText = 'Lưu Phim', isSubmitti
     rating: initialData?.rating !== undefined ? String(initialData?.rating) : '',
     description: initialData?.description || '',
     imageUrl: initialData?.imageUrl || '',
+    originalPrice: initialData?.originalPrice !== undefined ? String(initialData?.originalPrice) : '',
+    currentPrice: initialData?.currentPrice !== undefined ? String(initialData?.currentPrice) : '',
   });
 
   const [errors, setErrors] = useState({});
@@ -43,6 +45,16 @@ const MovieForm = ({ initialData, onSubmit, buttonText = 'Lưu Phim', isSubmitti
       newErrors.rating = 'Đánh giá phải là một số nằm trong khoảng từ 1 đến 10.';
     }
 
+    const origPriceVal = Number(formData.originalPrice);
+    if (formData.originalPrice === '' || isNaN(origPriceVal) || origPriceVal < 0) {
+      newErrors.originalPrice = 'Giá vé gốc phải là số không âm.';
+    }
+
+    const currPriceVal = Number(formData.currentPrice);
+    if (formData.currentPrice === '' || isNaN(currPriceVal) || currPriceVal < 0) {
+      newErrors.currentPrice = 'Giá vé hiện tại phải là số không âm.';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -52,10 +64,12 @@ const MovieForm = ({ initialData, onSubmit, buttonText = 'Lưu Phim', isSubmitti
     
     if (!validateForm()) return;
 
-    // Chuẩn bị dữ liệu gửi đi (rating chuyển thành số)
+    // Chuẩn bị dữ liệu gửi đi (rating, prices chuyển thành số)
     const payload = {
       ...formData,
       rating: Number(formData.rating),
+      originalPrice: Number(formData.originalPrice),
+      currentPrice: Number(formData.currentPrice),
     };
 
     onSubmit(payload);
@@ -107,6 +121,38 @@ const MovieForm = ({ initialData, onSubmit, buttonText = 'Lưu Phim', isSubmitti
             className={errors.rating ? 'input-error' : ''}
           />
           {errors.rating && <span className="error-text">{errors.rating}</span>}
+        </div>
+      </div>
+
+      <div className="form-row">
+        <div className="form-group">
+          <label htmlFor="originalPrice">Giá vé gốc (VNĐ) *</label>
+          <input
+            type="number"
+            id="originalPrice"
+            name="originalPrice"
+            value={formData.originalPrice}
+            onChange={handleChange}
+            placeholder="Ví dụ: 120000"
+            min="0"
+            className={errors.originalPrice ? 'input-error' : ''}
+          />
+          {errors.originalPrice && <span className="error-text">{errors.originalPrice}</span>}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="currentPrice">Giá vé hiện tại (VNĐ) *</label>
+          <input
+            type="number"
+            id="currentPrice"
+            name="currentPrice"
+            value={formData.currentPrice}
+            onChange={handleChange}
+            placeholder="Ví dụ: 90000"
+            min="0"
+            className={errors.currentPrice ? 'input-error' : ''}
+          />
+          {errors.currentPrice && <span className="error-text">{errors.currentPrice}</span>}
         </div>
       </div>
 

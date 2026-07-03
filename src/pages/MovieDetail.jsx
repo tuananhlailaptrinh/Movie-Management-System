@@ -39,6 +39,22 @@ const MovieDetail = () => {
             <p className="movie-detail-genre"><strong>Thể loại:</strong> {movie.genre}</p>
             <p className="movie-detail-rating"><strong>Đánh giá:</strong> ⭐ {movie.rating}/10</p>
           </div>
+          
+          <div className="movie-detail-pricing">
+            <div className="price-item">
+              <span className="price-label">Giá vé gốc:</span>
+              <span className="price-value strikethrough">
+                {movie.originalPrice !== undefined ? `${Number(movie.originalPrice).toLocaleString('vi-VN')} đ` : 'N/A'}
+              </span>
+            </div>
+            <div className="price-item">
+              <span className="price-label">Giá vé hiện tại:</span>
+              <span className="price-value highlight">
+                {movie.currentPrice !== undefined ? `${Number(movie.currentPrice).toLocaleString('vi-VN')} đ` : 'Liên hệ'}
+              </span>
+            </div>
+          </div>
+
           <p className="movie-detail-description"><strong>Mô tả:</strong> {movie.description}</p>
 
           <div className="movie-detail-actions">

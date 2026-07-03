@@ -59,6 +59,16 @@ const MovieList = () => {
                     ? `${movie.description.substring(0, 100)}...`
                     : movie.description}
                 </p>
+                <div className="movie-prices">
+                  <span className="current-price">
+                    {movie.currentPrice !== undefined ? `${Number(movie.currentPrice).toLocaleString('vi-VN')} đ` : 'Liên hệ'}
+                  </span>
+                  {movie.originalPrice !== undefined && movie.originalPrice !== movie.currentPrice && (
+                    <span className="original-price">
+                      {Number(movie.originalPrice).toLocaleString('vi-VN')} đ
+                    </span>
+                  )}
+                </div>
                 <div className="movie-meta">
                   <span className="movie-rating-badge">⭐ {movie.rating}/10</span>
                 </div>

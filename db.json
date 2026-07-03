@@ -6,7 +6,9 @@
       "genre": "Action, Crime, Drama",
       "rating": 9,
       "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-      "imageUrl": "https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80",
+      "originalPrice": 120000,
+      "currentPrice": 90000
     },
     {
       "id": "2",
@@ -14,7 +16,9 @@
       "genre": "Action, Sci-Fi, Adventure",
       "rating": 8.8,
       "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project.",
-      "imageUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
+      "originalPrice": 110000,
+      "currentPrice": 85000
     },
     {
       "id": "3",
@@ -22,7 +26,9 @@
       "genre": "Sci-Fi, Adventure, Drama",
       "rating": 8.7,
       "description": "When Earth becomes uninhabitable, a team of explorers travels through a wormhole in space in an attempt to ensure humanity's survival.",
-      "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+      "originalPrice": 130000,
+      "currentPrice": 95000
     },
     {
       "id": "4",
@@ -30,7 +36,9 @@
       "genre": "Drama, Thriller, Comedy",
       "rating": 8.6,
       "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-      "imageUrl": "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
+      "originalPrice": 100000,
+      "currentPrice": 75000
     },
     {
       "id": "5",
@@ -38,15 +46,19 @@
       "genre": "Animation, Fantasy, Family",
       "rating": 8.6,
       "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
-      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+      "originalPrice": 90000,
+      "currentPrice": 65000
     },
     {
-      "title": "World Cup",
-      "genre": "Thể Thao",
-      "rating": 10,
-      "description": "Ngày hội bóng đá lớn nhất thế giới.",
-      "imageUrl": "https://baoquocte.vn/stores/news_dataimages/2026/052026/20/20/cap-nhat-khung-gio-thi-dau-world-cup-2026-moi-nhat-20260520204242.webp?rt=202606080643",
-      "id": "pVCU-JoKjkY"
+      "title": "Test Movie",
+      "genre": "Test",
+      "rating": 8,
+      "description": "",
+      "imageUrl": "",
+      "originalPrice": 100000,
+      "currentPrice": 75000,
+      "id": "srMHJ0iJ688"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
